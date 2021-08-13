@@ -19,6 +19,7 @@ object Config {
     const val VERSION = "V0.0α"
 
     // Font Settings
+    // MonoSpace Fonts work best :P
     const val FONT = "JetBrains Mono"
     const val FONT_SIZE = 13
 
