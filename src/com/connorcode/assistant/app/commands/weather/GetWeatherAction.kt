@@ -1,8 +1,9 @@
-package com.connorcode.assistant.app.weather
+// Note: I did not make this command.
+// I have modified it slightly (apart from converting it to kotlin)
 
-import java.util.Arrays
+package com.connorcode.assistant.app.commands.weather
+
 import com.mashape.unirest.http.Unirest
-import com.connorcode.assistant.app.weather.GetWeatherAction
 import com.mashape.unirest.http.JsonNode
 import com.mashape.unirest.http.exceptions.UnirestException
 import com.connorcode.assistant.Common
@@ -10,16 +11,15 @@ import com.connorcode.assistant.Assistant
 import com.connorcode.assistant.app.Action
 import com.connorcode.assistant.app.Response
 import com.mashape.unirest.request.HttpRequest
-import org.json.JSONObject
 
 class GetWeatherAction : Action() {
-    var keywords = arrayOf("weather", "what", "is", "in")
-    var scores = intArrayOf(5, 1, 1, 1)
+    private var keywords = arrayOf("weather", "what", "is", "in")
+    private var scores = intArrayOf(5, 1, 1, 1)
     override fun doCommand(command: String) {
         // remove keywords from the command to extract the location
         // we want to query the weather for
         val words = listOf(*command.split(" ".toRegex()).toTypedArray())
-        var req: HttpRequest? = null
+        val req: HttpRequest?
         val location = words[words.size - 1]
         req = if (words.contains("zip") || words.contains("zipcode")) {
             Unirest.get("https://api.openweathermap.org/data/2.5/weather")
@@ -38,6 +38,7 @@ class GetWeatherAction : Action() {
             handleResult(node)
         } catch (ignored: UnirestException) {
             // IGNORE ERRORS
+            // BECAUSE YES
         }
     }
 

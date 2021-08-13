@@ -4,6 +4,7 @@ import com.connorcode.assistant.app.Action;
 import com.connorcode.assistant.app.App;
 import com.connorcode.assistant.app.Displayable;
 import com.connorcode.assistant.app.Response;
+import com.connorcode.assistant.app.commands.version.VersionApp;
 import com.connorcode.assistant.app.exit.ExitApp;
 import com.connorcode.assistant.app.hello.HelloApp;
 import com.connorcode.assistant.app.laketemp.LakeTempApp;
@@ -29,7 +30,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
@@ -79,7 +79,8 @@ public class Assistant extends Application {
                 new ExitApp(),
                 new LakeTempApp(),
                 new HelloApp(),
-                new NoseApp()
+                new NoseApp(),
+                new VersionApp()
         };
     }
 
@@ -109,11 +110,11 @@ public class Assistant extends Application {
 
         commandTextField.setOnAction(doCommand);
 
-        displayItemsListView.setCellFactory(new Callback<ListView<Displayable>, ListCell<Displayable>>() {
+        displayItemsListView.setCellFactory(new Callback<>() {
 
             @Override
             public ListCell<Displayable> call(ListView<Displayable> response) {
-                return new ListCell<Displayable>() {
+                return new ListCell<>() {
                     @Override
                     protected void updateItem(Displayable response, boolean empty) {
                         super.updateItem(response, empty);

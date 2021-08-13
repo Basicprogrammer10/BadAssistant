@@ -2,7 +2,7 @@ package com.connorcode.assistant.app.weather
 
 import com.connorcode.assistant.app.Action
 import com.connorcode.assistant.app.App
-import com.connorcode.assistant.app.weather.GetWeatherAction
+import com.connorcode.assistant.app.commands.weather.GetWeatherAction
 
 class WeatherApp : App() {
     override fun getActions(): List<Action> {
