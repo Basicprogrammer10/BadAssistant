@@ -1,8 +1,7 @@
-package com.connorcode.assistant.app.nose
+package com.connorcode.assistant.app.commands.nose
 
 import com.connorcode.assistant.app.Action
 import com.connorcode.assistant.app.App
-import com.connorcode.assistant.app.nose.GetNoseAction
 
 class NoseApp : App() {
     override val name = "Nose"

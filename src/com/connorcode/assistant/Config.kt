@@ -2,13 +2,13 @@ package com.connorcode.assistant
 
 import com.connorcode.assistant.app.App
 import com.connorcode.assistant.app.commands.version.VersionApp
-import com.connorcode.assistant.app.exit.ExitApp
-import com.connorcode.assistant.app.hello.HelloApp
-import com.connorcode.assistant.app.help.HelpApp
-import com.connorcode.assistant.app.laketemp.LakeTempApp
-import com.connorcode.assistant.app.nose.NoseApp
-import com.connorcode.assistant.app.time.TimeApp
-import com.connorcode.assistant.app.weather.WeatherApp
+import com.connorcode.assistant.app.commands.exit.ExitApp
+import com.connorcode.assistant.app.commands.hello.HelloApp
+import com.connorcode.assistant.app.commands.help.HelpApp
+import com.connorcode.assistant.app.commands.laketemp.LakeTempApp
+import com.connorcode.assistant.app.commands.nose.NoseApp
+import com.connorcode.assistant.app.commands.time.TimeApp
+import com.connorcode.assistant.app.commands.weather.WeatherApp
 
 /// Some config options
 object Config {

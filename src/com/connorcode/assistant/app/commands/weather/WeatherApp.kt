@@ -1,4 +1,4 @@
-package com.connorcode.assistant.app.weather
+package com.connorcode.assistant.app.commands.weather
 
 import com.connorcode.assistant.app.Action
 import com.connorcode.assistant.app.App

@@ -1,4 +1,4 @@
-package com.connorcode.assistant.app.exit
+package com.connorcode.assistant.app.commands.exit
 
 import com.connorcode.assistant.Assistant
 import com.connorcode.assistant.Common

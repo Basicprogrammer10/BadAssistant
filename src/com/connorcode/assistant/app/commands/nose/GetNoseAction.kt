@@ -1,4 +1,4 @@
-package com.connorcode.assistant.app.nose
+package com.connorcode.assistant.app.commands.nose
 
 import com.connorcode.assistant.Assistant
 import com.connorcode.assistant.Common

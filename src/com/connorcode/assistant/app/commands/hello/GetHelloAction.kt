@@ -1,4 +1,4 @@
-package com.connorcode.assistant.app.hello
+package com.connorcode.assistant.app.commands.hello
 
 import com.connorcode.assistant.Assistant
 import com.connorcode.assistant.Common
@@ -15,8 +15,8 @@ private val RESPONSE = arrayOf(
     "✨",
     "╰(*°▽°*)╯",
     "Amazing!",
-    "Abit slow...",
-    "According to my lawye  r I don’t have to answer that question",
+    "A bit slow...",
+    "According to my lawyer I don’t have to answer that question",
     "I can’t complain. My contract actually forbids me",
     "Ready for a nap",
     "I hear good things. But I don’t think it’s smart to believe rumors",

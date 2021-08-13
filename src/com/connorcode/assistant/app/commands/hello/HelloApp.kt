@@ -1,8 +1,7 @@
-package com.connorcode.assistant.app.hello
+package com.connorcode.assistant.app.commands.hello
 
 import com.connorcode.assistant.app.Action
 import com.connorcode.assistant.app.App
-import com.connorcode.assistant.app.hello.GetHelloAction
 
 class HelloApp : App() {
     override val name = "Hello"

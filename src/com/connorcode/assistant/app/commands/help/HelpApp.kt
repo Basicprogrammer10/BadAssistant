@@ -1,4 +1,4 @@
-package com.connorcode.assistant.app.help
+package com.connorcode.assistant.app.commands.help
 
 import com.connorcode.assistant.app.Action
 import com.connorcode.assistant.app.App

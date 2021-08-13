@@ -1,3 +1,5 @@
+@file:Suppress("SpellCheckingInspection", "SpellCheckingInspection", "SpellCheckingInspection")
+
 package test.com.connorcode.com
 
 import com.connorcode.assistant.Common

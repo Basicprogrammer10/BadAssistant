@@ -12,7 +12,6 @@ class GetHelpAction : Action() {
     private val weight = intArrayOf(8, 1, 1)
     override fun doCommand(command: String) {
         val commands = command.split(" ")
-        println(commands)
         val apps = Config.COMMANDS
 
         if (commands.size == 1) mainHelp(apps)

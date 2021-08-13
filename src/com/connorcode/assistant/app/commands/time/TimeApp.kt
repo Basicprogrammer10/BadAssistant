@@ -1,8 +1,7 @@
-package com.connorcode.assistant.app.time
+package com.connorcode.assistant.app.commands.time
 
 import com.connorcode.assistant.app.Action
 import com.connorcode.assistant.app.App
-import com.connorcode.assistant.app.time.GetTimeAction
 
 class TimeApp : App() {
     override val name = "Time"

@@ -1,4 +1,4 @@
-package com.connorcode.assistant.app.time
+package com.connorcode.assistant.app.commands.time
 
 import com.connorcode.assistant.Assistant
 import com.connorcode.assistant.Common

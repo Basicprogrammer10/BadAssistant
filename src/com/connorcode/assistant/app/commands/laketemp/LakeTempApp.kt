@@ -1,8 +1,7 @@
-package com.connorcode.assistant.app.laketemp
+package com.connorcode.assistant.app.commands.laketemp
 
 import com.connorcode.assistant.app.Action
 import com.connorcode.assistant.app.App
-import com.connorcode.assistant.app.laketemp.GetLakeTempAction
 
 class LakeTempApp : App() {
     override val name = "LakeTemp"

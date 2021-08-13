@@ -1,13 +1,11 @@
-package com.connorcode.assistant.app.laketemp
+package com.connorcode.assistant.app.commands.laketemp
 
-import org.json.JSONObject
-import com.mashape.unirest.http.Unirest
 import com.connorcode.assistant.Assistant
-import com.mashape.unirest.http.exceptions.UnirestException
-import java.lang.NumberFormatException
 import com.connorcode.assistant.Common
 import com.connorcode.assistant.app.Action
 import com.connorcode.assistant.app.Response
+import com.mashape.unirest.http.Unirest
+import com.mashape.unirest.http.exceptions.UnirestException
 import kotlin.math.roundToInt
 
 class GetLakeTempAction : Action() {
