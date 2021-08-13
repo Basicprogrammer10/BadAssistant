@@ -4,13 +4,6 @@ import com.connorcode.assistant.app.Action;
 import com.connorcode.assistant.app.App;
 import com.connorcode.assistant.app.Displayable;
 import com.connorcode.assistant.app.Response;
-import com.connorcode.assistant.app.commands.version.VersionApp;
-import com.connorcode.assistant.app.exit.ExitApp;
-import com.connorcode.assistant.app.hello.HelloApp;
-import com.connorcode.assistant.app.laketemp.LakeTempApp;
-import com.connorcode.assistant.app.nose.NoseApp;
-import com.connorcode.assistant.app.time.TimeApp;
-import com.connorcode.assistant.app.weather.WeatherApp;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import javafx.application.Application;
@@ -73,15 +66,7 @@ public class Assistant extends Application {
     }
 
     private static App[] getAvailableApps() {
-        return new App[]{
-                new WeatherApp(),
-                new TimeApp(),
-                new ExitApp(),
-                new LakeTempApp(),
-                new HelloApp(),
-                new NoseApp(),
-                new VersionApp()
-        };
+        return Config.getCOMMANDS();
     }
 
     @Override
@@ -120,9 +105,8 @@ public class Assistant extends Application {
                         super.updateItem(response, empty);
                         super.setText("");
                         super.setGraphic(null);
-                        if (response != null) {
-                            response.update(this);
-                        }
+                        super.setStyle("-fx-font: " + Config.FONT_SIZE + "px '" + Config.FONT + "';");
+                        if (response != null) response.update(this);
                     }
                 };
             }
