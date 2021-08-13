@@ -1,6 +1,7 @@
 package com.connorcode.assistant
 
 import com.connorcode.assistant.app.App
+import com.connorcode.assistant.app.commands.coinflip.CoinFlipApp
 import com.connorcode.assistant.app.commands.version.VersionApp
 import com.connorcode.assistant.app.commands.exit.ExitApp
 import com.connorcode.assistant.app.commands.hello.HelloApp
@@ -33,6 +34,7 @@ object Config {
             TimeApp(),
             VersionApp(),
             WeatherApp(),
-            HelpApp()
+            HelpApp(),
+            CoinFlipApp()
     )
 }
