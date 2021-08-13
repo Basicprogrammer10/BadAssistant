@@ -27,7 +27,7 @@ object Common {
 
     // This took too much time to make...
     // At least its kinda cool
-    private fun diceCoefficient(rawA: String, rawB: String): Double {
+    fun diceCoefficient(rawA: String, rawB: String): Double {
         // Remove Spaces
 
         val a = rawA.replace(" ", "")
