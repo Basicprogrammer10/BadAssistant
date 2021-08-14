@@ -34,7 +34,7 @@ object Config {
             LakeTempApp(),
             TimeApp(),
             VersionApp(),
-            WeatherApp(),
+//            WeatherApp(),
             HelpApp(),
             CoinFlipApp(),
             RandomApp()

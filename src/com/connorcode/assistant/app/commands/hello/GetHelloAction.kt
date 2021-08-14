@@ -28,12 +28,25 @@ private val RESPONSE = arrayOf(
     "Oh terrible, but I’m used to it"
 )
 
+private val HELLO_RESPONSE = arrayOf(
+        "Hi!",
+        "Hola",
+        "Glad to see you :P",
+        "Nice seeing you here!"
+)
+
 class GetHelloAction : Action() {
     private val keywords = arrayOf("hello", "how", "are", "you", "today")
     private val weight = intArrayOf(5, 2, 2, 3, 2)
 
     override fun doCommand(command: String) {
-        Assistant.getInstance().displayItem(Response(RESPONSE[Random().nextInt(RESPONSE.size)]))
+        // If is a how are you questioning
+        // This way of doing it is just... the worst. Please make this bettor. I BEG YOU
+        if (command.contains("how") || command.contains("are") || command.contains("you")) {
+            Assistant.getInstance().displayItem(Response(RESPONSE[Random().nextInt(RESPONSE.size)]))
+            return
+        }
+        Assistant.getInstance().displayItem(Response(HELLO_RESPONSE[Random().nextInt(HELLO_RESPONSE.size)]))
     }
 
     override fun getLikelihood(command: String): Double {
