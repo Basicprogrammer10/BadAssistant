@@ -28,4 +28,10 @@ class CommonTest {
         assert(Common.diceCoefficient("hello", "helll") == 0.75)
         assert(Common.diceCoefficient("hello", "heello") == 0.8888888888888888)
     }
+
+    @Test
+    fun testTitleCase() {
+        assert(Common.TitleCase("hello world") == "Hello World")
+        assert(Common.TitleCase("how are you?") == "How Are You?")
+    }
 }

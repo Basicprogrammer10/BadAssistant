@@ -74,6 +74,7 @@ public class Assistant extends Application {
         initUILayout(stage);
         initUIListener();
         initAppActions();
+        instance.displayItem(new Response("Virtual Assistant " + Config.VERSION + "\nBy Connor Slade (kinda)"));
     }
 
     /**
@@ -153,7 +154,7 @@ public class Assistant extends Application {
             }
         }
 
-        displayItems.add(new EnteredCommand(command));
+        displayItems.add(new EnteredCommand(Common.INSTANCE.TitleCase(command)));
         if (bestActionScore > 0.5) {
             try {
                 bestAction.doCommand(command);

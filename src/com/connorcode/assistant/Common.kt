@@ -54,4 +54,13 @@ object Common {
         }
         return 2.0 * intersectionSize / (a.length + b.length - 2)
     }
+
+    fun TitleCase(text: String): String {
+        var working: String = "";
+
+        for (i in text.split(" ")) {
+            working += "${i[0].uppercase()}${i.substring(1)} "
+        }
+        return working.substring(0, working.length - 1)
+    }
 }
