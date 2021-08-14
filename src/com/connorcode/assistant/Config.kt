@@ -8,6 +8,7 @@ import com.connorcode.assistant.app.commands.hello.HelloApp
 import com.connorcode.assistant.app.commands.help.HelpApp
 import com.connorcode.assistant.app.commands.laketemp.LakeTempApp
 import com.connorcode.assistant.app.commands.nose.NoseApp
+import com.connorcode.assistant.app.commands.random.RandomApp
 import com.connorcode.assistant.app.commands.time.TimeApp
 import com.connorcode.assistant.app.commands.weather.WeatherApp
 
@@ -35,6 +36,7 @@ object Config {
             VersionApp(),
             WeatherApp(),
             HelpApp(),
-            CoinFlipApp()
+            CoinFlipApp(),
+            RandomApp()
     )
 }
