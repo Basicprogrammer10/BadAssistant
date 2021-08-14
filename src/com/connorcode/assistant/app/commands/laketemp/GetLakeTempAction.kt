@@ -12,7 +12,6 @@ class GetLakeTempAction : Action() {
     private val keywords = arrayOf("what", "is", "the", "lake", "current", "temp", "temperature")
     private val weight = intArrayOf(1, 1, 1, 5, 3, 4, 4)
     override fun doCommand(command: String) {
-        var temp = 0.0f
         try {
             // WOO I knew making this api would come in handy :P
             // I made this api, Check the code here https://github.com/Basicprogrammer10/WaterTemp
@@ -22,7 +21,7 @@ class GetLakeTempAction : Action() {
                 .asJson()
                 .body
                 .getObject()
-            temp = (response.getDouble("temp") * 1000).roundToInt().toFloat() / 1000
+            val temp = (response.getDouble("temp") * 1000).roundToInt().toFloat() / 1000
             Assistant.getInstance().displayItem(Response("The Lake is currently: $temp°F"))
         } catch (e: UnirestException) {
             Assistant.getInstance()
