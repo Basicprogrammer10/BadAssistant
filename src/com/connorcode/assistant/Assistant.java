@@ -167,7 +167,7 @@ public class Assistant extends Application {
 
         // If chat-bot is disabled
         if (!Config.CHAT_BOT) {
-            displayItem(new Response("I have no Idea that what means..."));
+            displayItem(new Response("I have no Idea that what means...\nMaybe try 'help'"));
             return;
         }
 
@@ -178,7 +178,7 @@ public class Assistant extends Application {
                 .asJson().getBody().getObject();
             displayItem(new Response(response.getString("response")));
         } catch (UnirestException | UnsupportedEncodingException e) {
-            displayItem(new Response("I have no Idea that what means..."));
+            displayItem(new Response("I have no Idea that what means...\nMaybe try 'help'"));
         }
     }
 

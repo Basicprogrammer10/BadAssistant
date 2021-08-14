@@ -6,6 +6,7 @@ import com.connorcode.assistant.app.App
 class HelpApp : App() {
     override val name = "Help"
     override val help = "Get Info about commands"
+    override val usage = arrayOf("Help", "Help [Command Name]")
 
     override fun getActions(): List<Action> {
         return listOf<Action>(GetHelpAction())

@@ -6,6 +6,7 @@ import com.connorcode.assistant.app.App
 class ExitApp : App() {
     override val name = "Exit"
     override val help = "Go Away :'("
+    override val usage = arrayOf("exit", "Go Away!", "Bye", "Go Away!")
 
     override fun getActions(): List<Action> {
         return listOf<Action>(GetExitAction())

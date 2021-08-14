@@ -4,7 +4,6 @@ import com.connorcode.assistant.Assistant
 import com.connorcode.assistant.Common
 import com.connorcode.assistant.app.Action
 import com.connorcode.assistant.app.Response
-import kotlin.system.exitProcess
 
 class Get{name}Action : Action() {
     private val keywords = arrayOf()
@@ -14,6 +13,6 @@ class Get{name}Action : Action() {
     }
 
     override fun getLikelihood(command: String): Double {
-        return Common.getLikelihoodStrict(command, keywords, weight)
+        return Common.getLikelihood(command, keywords, weight)
     }
 }

@@ -33,11 +33,19 @@ fun mainHelp(apps: Array<App>) {
     Assistant.getInstance().displayItem(Response(helpString))
 }
 
-fun commandHelp(apps: Array<App>, command: List<String>) {
+fun commandHelp(apps: Array<App>, commands: List<String>) {
+    val command = commands[1]
     for (i in apps) {
-        if (i.name.lowercase() != command[1]) continue
-        Assistant.getInstance().displayItem(Response("${i.name} - ${i.help}"))
+        if (Common.diceCoefficient(i.name.lowercase(), command) < 0.8) continue
+        var examples = ""
+        for (j in i.usage) {
+            examples += "  • ${Common.TitleCase(j)}\n"
+        }
+        examples = examples.substring(0..examples.length-2)
+        Assistant.getInstance().displayItem(Response("${i.name} - ${i.help}\n\nExamples:\n$examples"))
+        return
     }
+    Assistant.getInstance().displayItem(Response("Sorry no help page was found for that command..."))
 }
 
 fun getLongestName(apps: Array<App>): Int {

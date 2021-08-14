@@ -6,6 +6,7 @@ package com.connorcode.assistant.app
 abstract class App {
     abstract val name: String
     abstract val help: String
+    abstract val usage: Array<String>
     // gets a list of actions associated with this app
     abstract fun getActions(): List<Action>
 }

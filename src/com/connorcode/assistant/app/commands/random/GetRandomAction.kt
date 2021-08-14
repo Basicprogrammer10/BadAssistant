@@ -28,6 +28,6 @@ class GetRandomAction : Action() {
     }
 
     override fun getLikelihood(command: String): Double {
-        return Common.getLikelihoodStrict(command, keywords, weight)
+        return Common.getLikelihood(command, keywords, weight)
     }
 }

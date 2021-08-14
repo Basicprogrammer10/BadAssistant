@@ -6,6 +6,7 @@ import com.connorcode.assistant.app.App
 class NoseApp : App() {
     override val name = "Nose"
     override val help = "Nose You :P"
+    override val usage = arrayOf("NOSE", "Shiloh says nose!")
 
     override fun getActions(): List<Action> {
         return listOf<Action>(GetNoseAction())
